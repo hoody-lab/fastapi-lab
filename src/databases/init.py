@@ -15,7 +15,7 @@ Base = declarative_base()
 # 세션은 데이터베이스에 대한 트랜잭션 단위
 SessionLocal = sessionmaker(
     autocommit = False,   # 트랜잭션이 자동으로 커밋되지 않도록 설정
-    autoflush = False,   # 자동으로 데이터베이스에 변경 사항을 반영하지 않도록 설정
+    autoflush = True,   # 자동으로 데이터베이스에 변경 사항을 반영하지 않도록 설정
     bind = engine,
 )
 
