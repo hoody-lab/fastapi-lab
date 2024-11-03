@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from .api.board_api import board_router
 
-@app.get("/")
-def hello():
-    return { "hello": "world" }
+app = FastAPI(
+    docs_url = "/api/docs",
+    openapi_url = "/api/openapi.json",
+)
+
+app.include_router(board_router, prefix = "/api")

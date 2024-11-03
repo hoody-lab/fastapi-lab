@@ -6,6 +6,6 @@ board_router = APIRouter(
 )
 
 # 게시판 목록 반환
-@board_router.get()
+@board_router.get("/")
 def get_boards():
-
+    return "hello"
