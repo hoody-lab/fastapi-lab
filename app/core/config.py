@@ -1,6 +1,4 @@
-import os
-from dotenv import load_dotenv
+from pydantic import BaseSettings, Field   # env에 해당하는 값을 가져온다.
 
-load_dotenv()
-
-DATABASE_URL = os.getenv('DATABASE_URL')
+class DatabaseConfig(BaseSettings):
+    database_url: str = Field(env = 'DATABASE_URL')
