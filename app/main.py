@@ -7,4 +7,4 @@ app = FastAPI(
     openapi_url = "/api/openapi.json",
 )
 
-app.include_router(board_router, prefix = "/api")
+app.include_router(board_router, prefix = "/api/v1")
